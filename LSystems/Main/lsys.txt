@@ -1,0 +1,25 @@
+
+//dragon
+axiom = FX
+X -> X+YF+
+Y -> -FX-Y
+angle = 90
+
+
+//gosper
+axiom = XF
+X -> X+YF++YF-FX--FXFX-YF+
+Y -> -FX+YFYF++YF+FX--FX-Y
+angle = 60
+
+
+//bush
+axiom = F
+F -> FF+[+F-F-F]-[-F+F+F]
+angle = 22.5
+
+//hilbert
+axiom = X
+X -> -YF+XFX+FY-
+Y -> +XF-YFY-FX+
+angle = 90
