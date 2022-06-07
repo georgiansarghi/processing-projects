@@ -29,10 +29,10 @@ void setup() {
       //o = 50;
       ip = new PVector(j * o + o, i * o + o);
       float ra = random(TWO_PI);
-      iv = new PVector(cos(ra), sin(ra)).mult(3);//PVector.random2D().mult(5);
-      iv = new PVector(0, 0);
-      ia = new PVector(random(-0.1, 0.1), 0);
-      ir = random(5, 15);
+      iv = new PVector(cos(ra), sin(ra)).mult(2);//PVector.random2D().mult(5);
+      //iv = new PVector(0, 0);
+      ia = new PVector(random(0, 0), 0);
+      //ir = random(5, 15);
       ir = 8;
       im = ir*ir;
       //iv = new PVector(5, 4);
@@ -40,9 +40,9 @@ void setup() {
     }
   }
   
-  balls[0].velocity.x = 2.99999;
-  balls[0].velocity.y = 2.00001;
-  balls[0].clr = color(255, 0, 0);
+  //balls[0].velocity.x = 2.99999;
+  //balls[0].velocity.y = 2.00001;
+  //balls[0].clr = color(255, 0, 0);
 
 
   //balls[target].radius = 20;
