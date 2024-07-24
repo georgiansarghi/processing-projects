@@ -29,9 +29,7 @@ This is a simple implementation of Chaikin's Algorithm for curve smoothing.
 
 ## [Diffusion Limited Aggregation](DiffusionLimitedAggregation)
 
-![Diffu](./DiffusionLimitedAggregation/results/dla.gif)
-
-![Diffu](./DiffusionLimitedAggregation/results/dla_2_10x.gif)
+![Diffu](./DiffusionLimitedAggregation/results/dla_2_30x.gif)
 
 ## [Elastic Collisions](ElasticCollisions)
 
@@ -49,11 +47,11 @@ This is a simple implementation of Chaikin's Algorithm for curve smoothing.
 
 ![Gravity](./GravityField/results/gravity.gif)
 
-![Gravity](./GravityField/results/test.png)
+![Gravity](./GravityField/results/test_small.png)
 
-![Julia and Mandelbrot](./JuliaSets2/results/julia_mandelbrot.gif)
+![Julia and Mandelbrot](./JuliaSets2/results/julia_mandelbrot_inverted.gif)
 
-![Logistic Map](./LogisticMap/results/logistic_map.gif)
+![Logistic Map](./LogisticMap/results/logistic_map_inverted.gif)
 
 ![Lorenz Attractor](./LorenzAttractor2/results/lorenz.gif)
 
@@ -63,10 +61,9 @@ This is a simple implementation of Chaikin's Algorithm for curve smoothing.
 
 ![Pythagoras Tree](./PythagorasTree/results/pythagoras.gif)
 
-![Iterated Function System - Tree](./SimpleIFS/results/tree.gif)
-
-![Iterated Function System - Fern](./SimpleIFS/results/fern.gif)
-
-![Times Table](./TimesTable/results/times.gif)
+<p float="left">
+  <img src="./SimpleIFS/results/tree.gif" width="400" />
+  <img src="./SimpleIFS/results/fern.gif" height="483" />
+</p>
 
 ![Ulam Spiral](./UlamSpiral/ulam.gif)
