@@ -67,7 +67,8 @@ void generate() {
   int index = (int)random(sides);
   PVector choice = startingPoints.get(index);
   
-  current.add(PVector.sub(choice, current).mult(1-1./ratio));
+  ratio = kissingRatio(sides);
+  current.add(PVector.sub(choice, current).mult(ratio));
  // println(random(1.5, 1.1));
   
   if(generatedPoints.size() > 10) {
@@ -78,6 +79,16 @@ void generate() {
 }
 
 
+float kissingRatio(int N) {
+  float theta = PI * (N - 2) / N;
+  int n = floor(N / 4);
+  float a = 0;
+  for (int i = 1; i <= n; i++) {
+    a += cos(i * (PI - theta));
+  }
+  float ropt = (1 + 2 * a) / (2 + 2 * a);
+  return ropt;
+}
 
 
 void generate(float n) {
