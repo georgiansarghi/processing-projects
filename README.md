@@ -32,13 +32,14 @@ This kind of period doubling cascade is a common feature of chaotic systems. The
 Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 $$
-\begin{align*} 
-2x - 5y &=  8 \\ 
+\begin{align*}
+2x - 5y &=  8 \\
 3x + 9y &=  -12
 \end{align*}
 $$
 
 The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for which the sequence
+
 $$
 \begin{aligned}
 z_0 &= 0 \\
@@ -47,6 +48,7 @@ z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
 $$
 
 $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
+
 does not diverge. Whan visualizing the Mandelbrot Set, the color of each point is usually dependent on the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_k| > 2$ for some $k \in \mathbb{N}$, then the sequence will definetly diverge (the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
 
 ![Mandelbrot Set](./Mandelbrot/results/mandel_pure.png)
