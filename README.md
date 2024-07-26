@@ -30,12 +30,14 @@ This kind of period doubling cascade is a common feature of chaotic systems. The
 ## [Mandelbrot set](Mandelbrot)
 
 Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
+
 $$
 \begin{align*} 
 2x - 5y &=  8 \\ 
 3x + 9y &=  -12
 \end{align*}
 $$
+
 The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for which the sequence
 $$
 \begin{aligned}
