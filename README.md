@@ -43,7 +43,7 @@ The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for wh
 $$
 \begin{aligned}
 z_0 &= 0 \\
-z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
+z_{n+1} &= z_n^2 + c \space\space\space\space\space n \in \mathbb{N}
 \end{aligned}
 $$
 
