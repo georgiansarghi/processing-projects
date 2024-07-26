@@ -1,4 +1,4 @@
-# Processing projects
+# Dynamical Systems, Fractals and Chaos - Processing Projects
 
 These are some of my old Processing projects. Some of the images generated with these programs ended up in my [high-school thesis](./.assets/tesina.pdf) (if you don't know italian, you may still enjoy the pictures :)).
 
@@ -16,7 +16,9 @@ $${\color{orange} \space (or \space freeze \space your \space browser... \space 
 Wiki: [Logistic map](https://en.wikipedia.org/wiki/Logistic_map)
 
 This is a simple implementation of the logistic map fractal. The logistic map is a simple mathematical model for population growth, defined by the recursive formula:
+
 $$x_{n+1} = r \cdot x_n \cdot (1 - x_n).$$
+
 Here, $x_n$ is the population at time $n$ and $r$ is a parameter that you could think of as a growth rate.
 
 Below, the $x$-axis represents the parameter $r$ (in the interval $[3, 4]$), and the $y$-axis represents the population. Starting from a population of $x_0 = 0.5$, we plot the populations $x_0, x_1, x_2, \ldots, x_{N}$ for a fixed number of iterations $N$. Initially (smaller values of $r$) the population converges to a stable equilibrium, but as $r$ increases, the system undergoes a period-doubling cascade and eventually enters a chaotic regime. The fun part of this project is that you can zoom in on the bifurcation diagram and see it's fractaly nature :D
@@ -29,8 +31,14 @@ This kind of period doubling cascade is a common feature of chaotic systems. The
 
 Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
-The Mandelbrot set is a fractal set of complex numbers $c$ for which the sequence $z_{n+1} = z_n^2 + c$, with $z_0 = 0$,
-does not diverge to infinity. The color of each point is determined by the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_n| > 2$, then the sequence will definetly diverge (as far as I remember, the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
+The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for which the sequence
+$$
+\begin{align*}
+z_0 &= 0\\
+z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
+\end{align*}
+$$
+does not diverge. Whan visualizing the Mandelbrot Set, the color of each point is usually dependent on the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_k| > 2$ for some $k \in \mathbb{N}$, then the sequence will definetly diverge (the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
 
 ![Mandelbrot Set](./Mandelbrot/results/mandel_pure.png)
 
@@ -49,7 +57,14 @@ Also, here are some screenshots I took while exploring the Mandelbrot set. I fin
 
 Wiki: [Julia Sets](https://en.wikipedia.org/wiki/Julia_set)
 
-The Julia set of a complex number $c$ is the set of points $z = z_0$ for which the sequence $z_{n+1} = z_n^2 + c$ does not diverge. The difference with the Mandelbrot set is that in the Julia set, $c$ is fixed and $z_0$ varies.
+The Julia set of a complex number $c$ is the set of points $z \in \mathbb{C}$ for which the sequence
+$$
+\begin{align*}
+z_0 &= z\\
+z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
+\end{align*}
+$$
+does not diverge. The difference with the Mandelbrot set is that in the Julia set, $c$ is fixed and $z_0$ varies.
 
 In the GIF below you can see how the value of $c$ viewed in relation to the Mandelbrot set affects the shape of the Julia set. For example, the Julia set is connected if and only if $c$ is in the Mandelbrot set, and it is a Cantor set if $c$ is in the complement of the Mandelbrot set. You may try this program and see if you can find other interesting properties of the Julia sets (e.g. observe the number of "petals" in the Julia sets changes as you change $c$).
 
@@ -90,7 +105,7 @@ A simulation of elastic collisions between multiple balls in a 2D environment. T
 
 This similation can be used to demonstrate "high sensitivity to initial conditions". More precisely, if you nudge one of the balls just a tiny bit, the whole system will evolve in a completely different way given enough time.
 
-The simulation could be optimized with various ways, such as using a priority queue to keep track of the next collisions. This perhaps wouldn't require me to speed up the GIF 30x.
+The simulation could be optimized with various ways, such as using a priority queue to keep track of the next collisions.
 ![Elastic Collisions](./ElasticCollisions/results/collisions.gif)
 
 ## [Chaos Game](ChaosGame)
