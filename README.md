@@ -11,6 +11,69 @@ $${\color{orange}Some \space of \space the \space GIFs \space are \space quite \
 
 $${\color{orange} \space (or \space freeze \space your \space browser... \space sorry \space about \space that \space :D)}$$
 
+## [The Logistic Map](LogisticMap)
+
+Wiki: [Logistic map](https://en.wikipedia.org/wiki/Logistic_map)
+
+This is a simple implementation of the logistic map fractal. The logistic map is a simple mathematical model for population growth, defined by the recursive formula:
+$$x_{n+1} = r \cdot x_n \cdot (1 - x_n).$$
+Here, $x_n$ is the population at time $n$ and $r$ is a parameter that you could think of as a growth rate.
+
+Below, the $x$-axis represents the parameter $r$ (in the interval $[3, 4]$), and the $y$-axis represents the population. Starting from a population of $x_0 = 0.5$, we plot the populations $x_0, x_1, x_2, \ldots, x_{N}$ for a fixed number of iterations $N$. Initially (smaller values of $r$) the population converges to a stable equilibrium, but as $r$ increases, the system undergoes a period-doubling cascade and eventually enters a chaotic regime. The fun part of this project is that you can zoom in on the bifurcation diagram and see it's fractaly nature :D
+
+![Logistic Map](./LogisticMap/results/logistic_map_inverted.gif)
+
+This kind of period doubling cascade is a common feature of chaotic systems. The "Feigenbaum constant" $\delta \approx 4.6692016091029909$ is a universal constant that describes the rate at which the period-doubling bifurcations occur as $r$ increases. ((This is also the ratio of radii of successive circles in the Mandelbrot set, which of course is not a coincidence, but if you ask me why, I would probably show you [this image](https://www.researchgate.net/profile/Tssachin-Venkatesh/publication/343986739/figure/fig1/AS:930432354897922@1598843768697/The-real-line-on-the-mandelbrot-set-lines-up-with-the-bifurcations-in-the-logistic-map-1.jpg) and try to pass it as an explanation.))
+
+## [Mandelbrot set](Mandelbrot)
+
+Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
+
+The Mandelbrot set is a fractal set of complex numbers $c$ for which the sequence $z_{n+1} = z_n^2 + c$, with $z_0 = 0$,
+does not diverge to infinity. The color of each point is determined by the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_n| > 2$, then the sequence will definetly diverge (as far as I remember, the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
+
+![Mandelbrot Set](./Mandelbrot/results/mandel_pure.png)
+
+In the figure above we did 7 iteration and used grayscale to represent the number of iterations. If $c \in \mathbb{C}$ is outside this circle of radius 2, then $z_1 = c$, so we conclude after the first iteration that the sequence will diverge. The darkness of the other regions is proportional to how many itarations we need to conclude that the sequence will diverge. We color a point black we cannot conclude that sequence will diverge after we exhausted our number of iteration (7 in the case of the picture). The Mandelbrot set is defined as the limit set of the points for which the sequence does not diverge.
+
+The GIF below shows a zoom on the boundary of the Mandelbrot set, with fancy colors.
+
+![Mandelbrot Set](./Mandelbrot/results/mandel_2.gif)
+
+Also, here are some screenshots I took while exploring the Mandelbrot set. I find them quite beautiful :) You can find more in the [results](./Mandelbrot/results) folder.
+
+![Mandelbrot Set](./Mandelbrot/results/-0.7667014533423592_0.10027058086116737man.png)
+![Mandelbrot Set](./Mandelbrot/results/distortedman.png)
+
+## [Julia Sets](JuliaSets2)
+
+Wiki: [Julia Sets](https://en.wikipedia.org/wiki/Julia_set)
+
+The Julia set of a complex number $c$ is the set of points $z = z_0$ for which the sequence $z_{n+1} = z_n^2 + c$ does not diverge. The difference with the Mandelbrot set is that in the Julia set, $c$ is fixed and $z_0$ varies.
+
+In the GIF below you can see how the value of $c$ viewed in relation to the Mandelbrot set affects the shape of the Julia set. For example, the Julia set is connected if and only if $c$ is in the Mandelbrot set, and it is a Cantor set if $c$ is in the complement of the Mandelbrot set. You may try this program and see if you can find other interesting properties of the Julia sets (e.g. observe the number of "petals" in the Julia sets changes as you change $c$).
+
+![Julia and Mandelbrot](./JuliaSets2/results/julia_mandelbrot_inverted.gif)
+
+## [Lorenz Attractor](LorenzAttractor2)
+
+Wiki: [Lorenz system](https://en.wikipedia.org/wiki/Lorenz_system)
+
+The Lorenz system is a set of three ordinary differential equations that describe a simple model of atmospheric convection. Edward Lorenz discovered that the system exhibits chaotic behavior for certain parameter values. The equations are:
+$$
+\begin{align*}
+\dot{x} &= \sigma(y - x) \\
+\dot{y} &= x(\rho - z) - y \\
+\dot{z} &= xy - \beta z
+\end{align*}
+$$
+
+where $\sigma, \rho, \beta \in \mathbb{R}.$
+
+The GIF below shows the evolution of 300 slightly different initial conditions in the Lorenz system with $\sigma = 10, \rho = 28, \beta = 8/3$. Even if the initial conditions are very close, the trajectories diverge exponentially fast.
+
+![Lorenz Attractor](./LorenzAttractor2/results/lorenz_crop.gif)
+
 ## [Diffusion Limited Aggregation](DiffusionLimitedAggregation)
 
 Wiki: [Diffusion-limited aggregation](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
@@ -81,69 +144,6 @@ Starting from a random point, the program applies the functions iteratively, and
 This is another example of a fractal attractor stemming from a simple iterative process. Visit this [link](https://paulbourke.net/fractals/peterdejong/) for details and more examples.
 
 ![De Jong Attractor](./DeJongAttractor/results/mille.png)
-
-## [The Logistic Map](LogisticMap)
-
-Wiki: [Logistic map](https://en.wikipedia.org/wiki/Logistic_map)
-
-This is a simple implementation of the logistic map fractal. The logistic map is a simple mathematical model for population growth, defined by the recursive formula:
-$$x_{n+1} = r \cdot x_n \cdot (1 - x_n).$$
-Here, $x_n$ is the population at time $n$ and $r$ is a parameter that you could think of as a growth rate.
-
-Below, the $x$-axis represents the parameter $r$ (in the interval $[3, 4]$), and the $y$-axis represents the population. Starting from a population of $x_0 = 0.5$, we plot the populations $x_0, x_1, x_2, \ldots, x_{N}$ for a fixed number of iterations $N$. Initially (smaller values of $r$) the population converges to a stable equilibrium, but as $r$ increases, the system undergoes a period-doubling cascade and eventually enters a chaotic regime. The fun part of this project is that you can zoom in on the bifurcation diagram and see it's fractaly nature :D
-
-![Logistic Map](./LogisticMap/results/logistic_map_inverted.gif)
-
-This kind of period doubling cascade is a common feature of chaotic systems. The "Feigenbaum constant" $\delta \approx 4.6692016091029909$ is a universal constant that describes the rate at which the period-doubling bifurcations occur as $r$ increases. ((This is also the ratio of radii of successive circles in the Mandelbrot set, which of course is not a coincidence, but if you ask me why, I would probably show you [this image](https://www.researchgate.net/profile/Tssachin-Venkatesh/publication/343986739/figure/fig1/AS:930432354897922@1598843768697/The-real-line-on-the-mandelbrot-set-lines-up-with-the-bifurcations-in-the-logistic-map-1.jpg) and try to pass it as an explanation.))
-
-## [Mandelbrot set](Mandelbrot)
-
-Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
-
-The Mandelbrot set is a fractal set of complex numbers $c$ for which the sequence $z_{n+1} = z_n^2 + c$, with $z_0 = 0$,
-does not diverge to infinity. The color of each point is determined by the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_n| > 2$, then the sequence will definetly diverge (as far as I remember, the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
-
-![Mandelbrot Set](./Mandelbrot/results/mandel_pure.png)
-
-In the figure above we did 7 iteration and used grayscale to represent the number of iterations. If $c \in \mathbb{C}$ is outside this circle of radius 2, then $z_1 = c$, so we conclude after the first iteration that the sequence will diverge. The darkness of the other regions is proportional to how many itarations we need to conclude that the sequence will diverge. We color a point black we cannot conclude that sequence will diverge after we exhausted our number of iteration (7 in the case of the picture). The Mandelbrot set is defined as the limit set of the points for which the sequence does not diverge.
-
-The GIF below shows a zoom on the boundary of the Mandelbrot set, with fancy colors.
-
-![Mandelbrot Set](./Mandelbrot/results/mandel_2.gif)
-
-Also, here are some screenshots I took while exploring the Mandelbrot set. I find them quite beautiful :) You can find more in the [results](./Mandelbrot/results) folder.
-
-![Mandelbrot Set](./Mandelbrot/results/-0.7667014533423592_0.10027058086116737man.png)
-![Mandelbrot Set](./Mandelbrot/results/distortedman.png)
-
-## [Julia Sets](JuliaSets2)
-
-Wiki: [Julia Sets](https://en.wikipedia.org/wiki/Julia_set)
-
-The Julia set of a complex number $c$ is the set of points $z = z_0$ for which the sequence $z_{n+1} = z_n^2 + c$ does not diverge. The difference with the Mandelbrot set is that in the Julia set, $c$ is fixed and $z_0$ varies.
-
-In the GIF below you can see how the value of $c$ viewed in relation to the Mandelbrot set affects the shape of the Julia set. For example, the Julia set is connected if and only if $c$ is in the Mandelbrot set, and it is a Cantor set if $c$ is in the complement of the Mandelbrot set. You may try this program and see if you can find other interesting properties of the Julia sets (e.g. observe the number of "petals" in the Julia sets changes as you change $c$).
-
-![Julia and Mandelbrot](./JuliaSets2/results/julia_mandelbrot_inverted.gif)
-
-## [Lorenz Attractor](LorenzAttractor2)
-
-Wiki: [Lorenz system](https://en.wikipedia.org/wiki/Lorenz_system)
-
-The Lorenz system is a set of three ordinary differential equations that describe a simple model of atmospheric convection. Edward Lorenz discovered that the system exhibits chaotic behavior for certain parameter values. The equations are:
-$$
-\begin{align*}
-\dot{x} &= \sigma(y - x) \\
-\dot{y} &= x(\rho - z) - y \\
-\dot{z} &= xy - \beta z
-\end{align*}
-$$
-
-where $\sigma, \rho, \beta \in \mathbb{R}.$
-
-The GIF below shows the evolution of 300 slightly different initial conditions in the Lorenz system with $\sigma = 10, \rho = 28, \beta = 8/3$. Even if the initial conditions are very close, the trajectories diverge exponentially fast.
-
-![Lorenz Attractor](./LorenzAttractor2/results/lorenz_crop.gif)
 
 ## [Pythagoras Tree](PythagorasTree)
 
