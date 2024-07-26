@@ -27,7 +27,7 @@ Below, the $x$-axis represents the parameter $r$ (in the interval $[3, 4]$), and
 
 This kind of period doubling cascade is a common feature of chaotic systems. The "Feigenbaum constant" $\delta \approx 4.6692016091029909$ is a universal constant that describes the rate at which the period-doubling bifurcations occur as $r$ increases. ((This is also the ratio of radii of successive circles in the Mandelbrot set, which of course is not a coincidence, but if you ask me why, I would probably show you [this image](https://www.researchgate.net/profile/Tssachin-Venkatesh/publication/343986739/figure/fig1/AS:930432354897922@1598843768697/The-real-line-on-the-mandelbrot-set-lines-up-with-the-bifurcations-in-the-logistic-map-1.jpg) and try to pass it as an explanation.))
 
-## [Mandelbrot set](Mandelbrot)
+## [Mandelbrot Set](Mandelbrot)
 
 Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
@@ -94,11 +94,11 @@ The GIF below shows the evolution of 300 slightly different initial conditions i
 
 ![Lorenz Attractor](./LorenzAttractor2/results/lorenz_crop.gif)
 
-## [Diffusion Limited Aggregation](DiffusionLimitedAggregation)
+## [Diffusion-Limited Aggregation](DiffusionLimitedAggregation)
 
 Wiki: [Diffusion-limited aggregation](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
 
-A simulation of a Diffusion-limited aggregation process (DLA). The setup starts with a central particle and multiple smaller particles scattered randomly across the screen. The smaller particles move with Brownian motion, and if they collide with the big particle or with other "dead" particles, they become "dead" themselves and stop moving.
+A simulation of a diffusion-limited aggregation process (DLA). The setup starts with a central particle and multiple smaller particles scattered randomly across the screen. The smaller particles move with Brownian motion, and if they collide with the big particle or with other "dead" particles, they become "dead" themselves and stop moving.
 
 ![Diffu](./DiffusionLimitedAggregation/results/dla_2_30x.gif)
 
@@ -110,7 +110,7 @@ A simulation of elastic collisions between multiple balls in a 2D environment. T
 
 This similation can be used to demonstrate "high sensitivity to initial conditions". More precisely, if you nudge one of the balls just a tiny bit, the whole system will evolve in a completely different way given enough time.
 
-The simulation could be optimized with various ways, such as using a priority queue to keep track of the next collisions.
+The simulation could be optimized in various ways, such as using a priority queue to keep track of the next collisions.
 ![Elastic Collisions](./ElasticCollisions/results/collisions.gif)
 
 ## [Chaos Game](ChaosGame)
@@ -137,7 +137,7 @@ A 3D version of the "Chaos Game". It generates fractal patterns by moving a poin
 
 ## [Iterated Function Systems](SimpleIFS)
 
-Wiki: [Iterated Function System](https://en.wikipedia.org/wiki/Iterated_function_system), [Fractal Compression](https://en.wikipedia.org/wiki/Fractal_compression)
+Wiki: [Iterated function system](https://en.wikipedia.org/wiki/Iterated_function_system), [Fractal Compression](https://en.wikipedia.org/wiki/Fractal_compression)
 
 This project generates fractal patterns using an iterated function system (IFS).
 This is similar in spirit to the "Chaos Game" project, but the IFS definition is more general.
