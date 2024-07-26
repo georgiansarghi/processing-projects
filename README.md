@@ -33,10 +33,10 @@ Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for which the sequence
 $$
-\begin{align}
-z_0 &= 0\\
+\begin{aligned}
+z_0 &= 0 \\
 z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
-\end{align}
+\end{aligned}
 $$
 does not diverge. Whan visualizing the Mandelbrot Set, the color of each point is usually dependent on the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_k| > 2$ for some $k \in \mathbb{N}$, then the sequence will definetly diverge (the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
 
