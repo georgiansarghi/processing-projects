@@ -31,13 +31,6 @@ This kind of period doubling cascade is a common feature of chaotic systems. The
 
 Wiki: [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
-$$
-\begin{align*}
-2x - 5y &=  8 \\
-3x + 9y &=  -12
-\end{align*}
-$$
-
 The Mandelbrot set is a fractal set of complex numbers $c \in \mathbb{C}$ for which the sequence
 
 $$
@@ -46,8 +39,6 @@ z_0 &= 0 \\
 z_{n+1} &= z_n^2 + c \space\space\space\space\space n \in \mathbb{N}
 \end{aligned}
 $$
-
-$$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 
 does not diverge. Whan visualizing the Mandelbrot Set, the color of each point is usually dependent on the number of iterations it takes for the sequence to diverge. You may ask, how do you decide that the sequence has diverged? It turns out that if $|z_k| > 2$ for some $k \in \mathbb{N}$, then the sequence will definetly diverge (the proof is rather simple). So, if $|z_n| > 2$, we can stop the iteration and color the point based on the number of iterations it took to reach this condition.
 
@@ -69,12 +60,14 @@ Also, here are some screenshots I took while exploring the Mandelbrot set. I fin
 Wiki: [Julia Sets](https://en.wikipedia.org/wiki/Julia_set)
 
 The Julia set of a complex number $c$ is the set of points $z \in \mathbb{C}$ for which the sequence
+
 $$
-\begin{align}
+\begin{aligned}
 z_0 &= z\\
-z_{n+1} &= z_n^2 + c \hspace{0.5cm} n \in \mathbb{N}
-\end{align}
+z_{n+1} &= z_n^2 + c \space\space\space\space\space  n \in \mathbb{N}
+\end{aligned}
 $$
+
 does not diverge. The difference with the Mandelbrot set is that in the Julia set, $c$ is fixed and $z_0$ varies.
 
 In the GIF below you can see how the value of $c$ viewed in relation to the Mandelbrot set affects the shape of the Julia set. For example, the Julia set is connected if and only if $c$ is in the Mandelbrot set, and it is a Cantor set if $c$ is in the complement of the Mandelbrot set. You may try this program and see if you can find other interesting properties of the Julia sets (e.g. observe the number of "petals" in the Julia sets changes as you change $c$).
@@ -86,12 +79,13 @@ In the GIF below you can see how the value of $c$ viewed in relation to the Mand
 Wiki: [Lorenz system](https://en.wikipedia.org/wiki/Lorenz_system)
 
 The Lorenz system is a set of three ordinary differential equations that describe a simple model of atmospheric convection. Edward Lorenz discovered that the system exhibits chaotic behavior for certain parameter values. The equations are:
+
 $$
-\begin{align}
+\begin{aligned}
 \dot{x} &= \sigma(y - x) \\
 \dot{y} &= x(\rho - z) - y \\
 \dot{z} &= xy - \beta z
-\end{align}
+\end{aligned}
 $$
 
 where $\sigma, \rho, \beta \in \mathbb{R}.$
