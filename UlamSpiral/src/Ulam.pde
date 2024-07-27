@@ -61,7 +61,23 @@ class Ulam { //<>//
 
   public void display() {
     if (isPrime(currentNumber)) {
-      fill(255);
+      boolean isEuler = false;
+      
+      //if (currentNumber < 1800)
+      for(int i = -2; i < 21; i++) {
+        //if((i*i + i + 41) == currentNumber) {
+        if((4*i*i - 2*i - 17) == currentNumber) {
+          isEuler = true;
+          print(i);
+          break;
+        }
+      }
+      
+      if (isEuler) {
+        fill(255, 0, 0);
+      } else {
+        fill(255);
+      }
     } else {
       fill(0);
     }

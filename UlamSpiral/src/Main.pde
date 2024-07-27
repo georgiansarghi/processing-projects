@@ -7,7 +7,7 @@ boolean speeding = false;
 
 void setup() {
   size(1000, 1000);
-  //frameRate(1000);
+  frameRate(1000);
   noStroke();
   
   gridSize += (gridSize+1)%2;
