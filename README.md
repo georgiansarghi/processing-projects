@@ -1,7 +1,6 @@
-# Dynamical Systems, Fractals and Chaos - Processing Projects
+# My collection of Processing Projects
 
-These are some of my Processing projects.
-I have also included some GIFs to give an idea of what the programs do :)
+These are some of my [Processing](https://processing.org/) projects.
 
 For some of these projects, I have taken inspiration from [Paul Bourke's personal pages](http://paulbourke.net/) and the book "The algorithmic beauty of plants" by Przemyslaw Prusinkiewicz and Aristid Lindenmayer.
 
