@@ -4,15 +4,15 @@ These are some of my [Processing](https://processing.org/) projects.
 
 For some of these projects, I have taken inspiration from [Paul Bourke's personal pages](http://paulbourke.net/) and the book "The algorithmic beauty of plants" by Przemyslaw Prusinkiewicz and Aristid Lindenmayer.
 
+## [Lorenz Attractor](LorenzAttractor2)
+
 ## [The Logistic Map](LogisticMap)
 
 ## [Mandelbrot Set](Mandelbrot)
 
-## [Julia Sets](JuliaSets2)
-
-## [Lorenz Attractor](LorenzAttractor2)
-
 ## [Diffusion-Limited Aggregation](DiffusionLimitedAggregation)
+
+## [Julia Sets](JuliaSets2)
 
 ## [Elastic Collisions](ElasticCollisions)
 
